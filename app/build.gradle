@@ -1,10 +1,17 @@
 plugins {
     id 'com.android.application'
+
+    id 'com.google.gms.google-services'
 }
 
 android {
     namespace 'com.app.whisprr'
     compileSdk 33
+
+    // enabled binding
+    dataBinding {
+        enabled = true
+    }
 
     defaultConfig {
         applicationId "com.app.whisprr"
@@ -12,7 +19,7 @@ android {
         targetSdk 33
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -26,6 +33,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    // enable View Binding -> direct acces to in for our layout
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -36,4 +47,29 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //Scalable size unit(support different size)help scale screen sizes
+    // unit size scales for screen sizes for sp and dp
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+
+
+    // Rounded Image Corer ImageView
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //Firebase components
+    implementation 'com.google.firebase:firebase-messaging:23.1.2'
+    implementation 'com.google.firebase:firebase-firestore:24.5.0'
+    implementation 'com.google.firebase:firebase-storage:20.1.0'
+    implementation 'com.google.firebase:firebase-auth:21.2.0'
+    implementation platform('com.google.firebase:firebase-bom:31.3.0')
+
+    //Multidex
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+
 }
