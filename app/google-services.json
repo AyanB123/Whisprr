@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1009747268703",
+    "project_id": "whisprr-2c8b4",
+    "storage_bucket": "whisprr-2c8b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1009747268703:android:0854e668e2b27aa100f7ea",
+        "android_client_info": {
+          "package_name": "com.app.whisprr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1009747268703-glo4o7h3adq4c4gf114pden0aurf3ppj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.whisprr",
+            "certificate_hash": "23a7ca3e74f263dedd562435c9a1e1a097946c9c"
+          }
+        },
+        {
+          "client_id": "1009747268703-3k9e8a1ca2h0cijav9ur1f53bgb2dumi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrDAb8OAn_dhu1uFn_70kzRSMO-te2DT4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1009747268703-3k9e8a1ca2h0cijav9ur1f53bgb2dumi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
