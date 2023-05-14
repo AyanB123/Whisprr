@@ -18,8 +18,14 @@
     <style name="Theme.Whisprrmain" parent="Theme.MaterialComponents.DayNight.NoActionBar">
     <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary_white</item>
-        <item name="android:statusBarColor">@color/primary_white</item>
+        <item name="android:statusBarColor">@color/primary</item>
         <item name="android:background">@color/primary</item>
     <!-- Customize your theme here. -->
 </style>
+    <style name="Theme.Whisprrmain.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Whisprrmain.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Whisprrmain.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

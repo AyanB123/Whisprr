@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.WelcomeStartUpActivity"
+    android:animateLayoutChanges="true">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/app_logo"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_logotemp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_app_name" />
+
+
+    <TextView
+        android:id="@+id/text_app_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:background="@android:color/transparent"
+        android:ellipsize="end"
+        android:fontFamily="@font/open_sans_semibold"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/app_name"
+        android:textColor="#FEEA95"
+        android:textSize="@dimen/_32ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04000002" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:background="@drawable/background_card_allcorner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_36sdp"
+        android:layout_marginBottom="@dimen/_36sdp"
+        app:layout_constraintTop_toBottomOf="@+id/app_logo">
+
+        <LinearLayout
+            android:id="@+id/welcome_card_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:gravity="fill_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/_26sdp"
+            android:paddingTop="@dimen/_18sdp"
+            android:paddingBottom="@dimen/_24sdp"
+
+            android:paddingEnd="@dimen/_26sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:autoSizeMaxTextSize="@dimen/_36ssp"
+                android:background="@android:color/transparent"
+                android:defaultFocusHighlightEnabled="false"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="@string/welcome"
+                android:textColor="@color/primary_purple"
+                android:textSize="@dimen/_36ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:autoSizeMaxTextSize="@dimen/_18ssp"
+                android:background="@android:color/transparent"
+                android:defaultFocusHighlightEnabled="false"
+                android:fontFamily="@font/open_sans"
+                android:lineSpacingExtra="@dimen/_4ssp"
+                android:text="@string/whisprr_slogan_text"
+                android:textColor="@color/primary_purple"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnContinue"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_23sdp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="@string/get_started"
+                android:textColor="@color/primary_purple"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:cornerRadius="@dimen/_14sdp"
+                app:strokeColor="@color/primary_purple"
+                app:strokeWidth="@dimen/_3sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:autoSizeMaxTextSize="@dimen/_18ssp"
+                android:background="@android:color/transparent"
+                android:defaultFocusHighlightEnabled="false"
+                android:fontFamily="@font/open_sans"
+                android:lineSpacingExtra="@dimen/_4ssp"
+                android:text="@string/term_condition_text"
+                android:textColor="@color/primary_grey"
+                android:textSize="@dimen/_8ssp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:fitsSystemWindows="false"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
