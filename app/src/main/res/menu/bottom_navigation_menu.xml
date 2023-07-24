@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/contact_option"
+        android:enabled="true"
+        android:icon="@drawable/ic_contact"
+        android:title="Contacts"
+       />
+    <item
+        android:id="@+id/setting_option"
+        android:enabled="true"
+        android:icon="@drawable/ic_message"
+        android:title="Chats"
+        />
+
+    <item
+        android:id="@+id/map_option"
+        android:enabled="true"
+        android:icon="@drawable/ic_more"
+        android:title="More"/>
+
+
+</menu>

@@ -65,6 +65,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage:20.1.0'
     implementation 'com.google.firebase:firebase-auth:21.2.0'
     implementation platform('com.google.firebase:firebase-bom:31.3.0')
+    implementation 'com.google.android.gms:play-services-auth:20.5.0'
 
     //Multidex
     implementation 'androidx.multidex:multidex:2.0.1'
@@ -78,4 +79,29 @@ dependencies {
     // Progress bar
     implementation 'com.github.ybq:Android-SpinKit:1.4.0'
 
+    //Phone number country code spinner
+    implementation 'com.hbb20:ccp:2.5.3'
+
+    //rounded image view
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+
+    //viewpager
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+
+    //viewpager2
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.mockito:mockito-core:3.11.2'
+    testImplementation 'androidx.arch.core:core-testing:2.2.0'
+    testImplementation 'org.robolectric:robolectric:4.6.1'
+
+    implementation 'com.airbnb.android:lottie:3.5.0'
+
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.12.31'
+
+
+    implementation 'com.karumi:dexter:6.2.2'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

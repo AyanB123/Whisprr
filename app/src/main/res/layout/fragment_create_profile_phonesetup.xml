@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".fragments.CreateProfilePhoneSetupFragment">
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_content_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/phonenumsetup_cardbody"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardheader">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/phonenum_graphic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_weight="3"
+                android:background="@android:color/transparent"
+                android:cropToPadding="false"
+                android:src="@drawable/graphic_phonesetup" />
+
+            <LinearLayout
+                android:id="@+id/numberbodycontainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:animateLayoutChanges="true"
+                android:background="@android:color/transparent"
+                android:orientation="vertical"
+                android:padding="@dimen/_18sdp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:background="@android:color/transparent"
+                    android:defaultFocusHighlightEnabled="false"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/phonenumsetup_prompt"
+                    android:textColor="@color/primary_purple"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:id="@+id/phonenumcontainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_24sdp"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        app:ccp_autoDetectCountry="true"
+                        app:ccp_contentColor="@android:color/transparent"
+                        app:ccp_showNameCode="true"
+                        app:ccp_textSize="@dimen/_16ssp" />
+
+                    <EditText
+                        android:id="@+id/inputNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@drawable/background_input_field"
+                        android:imeOptions="actionNext"
+                        android:importantForAutofill="no"
+                        android:textColor="@color/primary_white"
+                        android:textColorHint="@color/primary_white"
+                        android:textSize="@dimen/_16ssp" />
+
+
+                </LinearLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_phonenumsetup"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_32sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:text="Continue"
+                    android:textColor="@color/primary_purple"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    app:cornerRadius="@dimen/_14sdp"
+                    app:strokeColor="@color/primary_purple"
+                    app:strokeWidth="@dimen/_3sdp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardheader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:defaultFocusHighlightEnabled="false"
+                android:fontFamily="@font/open_sans_semibold"
+                android:padding="@dimen/_8sdp"
+                android:text="Phone Number Setup"
+                android:textColor="@color/primary_purple"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_18sdp"
+                android:progressTint="#412691" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

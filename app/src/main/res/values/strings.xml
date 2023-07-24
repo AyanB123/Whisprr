@@ -5,9 +5,43 @@
     <string name="term_condition_text">By creating an account, you accept our Terms and Conditions.</string>
     <string name="get_started">Get Started</string>
     <string name="whisprr_slogan_text">Discover the Power of Whisprr: \nConnect and Chat</string>
-    <!-- Strings used for fragments for navigation -->
-  
-   
 
-   
+
+    <string name="login_to_continue">Login to Continue</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="add_image">Add Image</string>
+    <string name="name">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="sign_in">Sign In</string>
+    <string name="select_user">Select User</string>
+    <string name="type_a_message">Type a message</string>
+    <string name="online">Online</string>
+    <string name="username">Username</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enteremail_prompt">Enter Your Email:</string>
+    <string name="enteremail_promptbody">Please enter Email like to create account with, ensure email does not belong to existing account</string>
+    <string name="rules">Rules:</string>
+    <string name="notinuse_rule_text">Not Already In Use</string>
+    <string name="validemail_rule_text">Valid Email</string>
+    <string name="enter_code_prompt">Enter Code</string>
+    <string name="enter_code_prompttext">We have emailed you a code to the email:</string>
+    <string name="code">Code</string>
+    <string name="validcode_rule_text">Valid Code</string>
+    <string name="phonenumsetup_prompt">Please enter Phone number like to associate to account ,ensure email not belong to existing account</string>
+    <string name="displaysetup_prompt">Please enter Name to display with your account.</string>
+    <string name="full_name">Full Name</string>
+    <string name="usernamesetup_prompt">Please enter Username like to use</string>
+    <string name="symbols_not_allowed"><![CDATA[Symbols not allowed: = _ - + < >]]></string>
+    <string name="emailverif_prompt">Please check your email for a verification link to complete your signup. Thank you!</string>
+    <string name="allow_access_to_contacts">Allow Access To Contacts</string>
+    <string name="icon_invitetext">Invite</string>
+    <string name="icon_messagetext">Message</string> <!-- Strings used for fragments for navigation -->
+
+
 </resources>

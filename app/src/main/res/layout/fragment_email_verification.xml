@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".fragments.EmailVerificationFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary">
+
+        <LinearLayout
+            android:id="@+id/titleHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_12sdp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/open_sans_light"
+                android:text="@string/login_to_continue"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_white"
+                android:textSize="@dimen/_18ssp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/app_logo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:scaleType="fitEnd"
+                android:src="@drawable/ic_logotemp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@drawable/background_content_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleHeader">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="@android:color/transparent"
+
+                android:orientation="vertical"
+                android:padding="@dimen/_18sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/email_graphic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="3"
+                    android:src="@drawable/graphic_enteremail"
+                    android:layout_gravity="center_horizontal"/>
+
+                <LinearLayout
+                    android:id="@+id/emailalreadyvercontainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@android:color/transparent"
+
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:background="@android:color/transparent"
+                        android:defaultFocusHighlightEnabled="false"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="Oops! The email has already been verified"
+                        android:textColor="@color/primary_purple"
+                        android:textSize="@dimen/_20ssp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+
+                        android:background="@android:color/transparent"
+                        android:defaultFocusHighlightEnabled="false"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Although it doesn't belong to an existing account, it can still be used for signing up\nLet's proceed and create your new account!"
+                        android:textColor="#CC412692"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_continuesignup_code"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_32sdp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:paddingTop="@dimen/_12sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:text="Continue"
+                        android:textColor="@color/primary_purple"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold"
+                        app:cornerRadius="@dimen/_14sdp"
+                        app:strokeColor="@color/primary_purple"
+                        app:strokeWidth="@dimen/_3sdp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/verify_email_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@android:color/transparent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:background="@android:color/transparent"
+                        android:defaultFocusHighlightEnabled="false"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="@string/enteremail_prompt"
+                        android:textColor="@color/primary_purple"
+                        android:textSize="@dimen/_20ssp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+
+                        android:background="@android:color/transparent"
+                        android:defaultFocusHighlightEnabled="false"
+                        android:fontFamily="@font/open_sans"
+                        android:text="@string/enteremail_promptbody"
+                        android:textColor="#CC412692"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+
+                    <EditText
+                        android:id="@+id/inputEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:background="@drawable/background_input_field"
+                        android:hint="@string/email"
+                        android:imeOptions="actionNext"
+                        android:importantForAutofill="no"
+                        android:inputType="textEmailAddress"
+                        android:maxHeight="30dp"
+                        android:paddingStart="@dimen/_16sdp"
+                        android:paddingEnd="@dimen/_16sdp"
+                        android:textColor="@color/primary_white"
+                        android:textColorHint="@color/primary_white"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@android:color/transparent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:autoSizeMaxTextSize="@dimen/_36ssp"
+                            android:background="@android:color/transparent"
+                            android:defaultFocusHighlightEnabled="false"
+                            android:fontFamily="@font/open_sans"
+                            android:text="@string/rules"
+                            android:textColor="#CC412692"
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/notinuse_rule_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:background="@android:color/transparent"
+                            android:orientation="horizontal"
+
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="10"
+                                android:background="@android:color/transparent"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_error" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autoSizeMaxTextSize="@dimen/_36ssp"
+                                android:background="@android:color/transparent"
+                                android:defaultFocusHighlightEnabled="false"
+                                android:fontFamily="@font/open_sans"
+                                android:text="@string/notinuse_rule_text"
+                                android:textColor="#CC412692"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@android:color/transparent"
+                            android:orientation="horizontal"
+
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="10"
+                                android:background="@android:color/transparent"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_error" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autoSizeMaxTextSize="@dimen/_36ssp"
+                                android:background="@android:color/transparent"
+                                android:defaultFocusHighlightEnabled="false"
+                                android:fontFamily="@font/open_sans"
+                                android:text="@string/validemail_rule_text"
+                                android:textColor="#CC412692"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_enter_email"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_32sdp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:paddingTop="@dimen/_12sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:text="Continue"
+                        android:textColor="@color/primary_purple"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold"
+                        app:cornerRadius="@dimen/_14sdp"
+                        app:strokeColor="@color/primary_purple"
+                        app:strokeWidth="@dimen/_3sdp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bodycontainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@android:color/transparent"
+
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:background="@android:color/transparent"
+                        android:defaultFocusHighlightEnabled="false"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="@string/enter_code_prompt"
+                        android:textColor="@color/primary_purple"
+                        android:textSize="@dimen/_20ssp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+
+                        android:background="@android:color/transparent"
+                        android:defaultFocusHighlightEnabled="false"
+                        android:fontFamily="@font/open_sans"
+                        android:text="@string/enter_code_prompttext"
+                        android:textColor="#CC412692"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/userverifacation_email_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:background="@android:color/transparent"
+                        android:defaultFocusHighlightEnabled="false"
+                        android:fontFamily="@font/open_sans"
+                        android:textColor="#F57856DD"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+
+                    <EditText
+                        android:id="@+id/inputVerificationCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:background="@drawable/background_input_field"
+                        android:hint="@string/code"
+                        android:imeOptions="actionNext"
+                        android:importantForAutofill="no"
+                        android:inputType="textEmailAddress"
+                        android:maxHeight="30dp"
+                        android:paddingStart="@dimen/_16sdp"
+                        android:paddingEnd="@dimen/_16sdp"
+                        android:textColor="@color/primary_white"
+                        android:textColorHint="@color/primary_white"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@android:color/transparent"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:id="@+id/validcode_rule_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@android:color/transparent"
+                            android:orientation="horizontal"
+
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="10"
+                                android:background="@android:color/transparent"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_error" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autoSizeMaxTextSize="@dimen/_36ssp"
+                                android:background="@android:color/transparent"
+                                android:defaultFocusHighlightEnabled="false"
+                                android:fontFamily="@font/open_sans"
+                                android:text="@string/validcode_rule_text"
+                                android:textColor="#CC412692"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_verify_code"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_32sdp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:paddingTop="@dimen/_12sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:text="Continue"
+                        android:textColor="@color/primary_purple"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold"
+                        app:cornerRadius="@dimen/_14sdp"
+                        app:strokeColor="@color/primary_purple"
+                        app:strokeWidth="@dimen/_3sdp" />
+
+
+                </LinearLayout>
+        </LinearLayout>
+
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

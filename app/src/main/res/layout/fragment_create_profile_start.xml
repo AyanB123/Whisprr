@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:animateLayoutChanges="true"
+tools:context=".fragments.CreateProfileStartFragment">
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_content_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/profilesetup_cardbody"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:animateLayoutChanges="true"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardheader">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/email_graphic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_weight="3"
+                android:background="@android:color/transparent"
+                android:src="@drawable/graphic_profilesetup" />
+
+            <LinearLayout
+                android:id="@+id/bodycontainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@android:color/transparent"
+                android:orientation="vertical"
+                android:padding="@dimen/_18sdp">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@android:color/transparent"
+                    android:defaultFocusHighlightEnabled="false"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Lets Create a Profile for you "
+
+                    android:textColor="@color/primary_purple"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@android:color/transparent"
+                    android:defaultFocusHighlightEnabled="false"
+                    android:fontFamily="@font/open_sans"
+                    android:text="Email being used for profile setup:"
+
+                    android:textColor="@color/primary_purple"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/profilesignupemail_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@android:color/transparent"
+                    android:defaultFocusHighlightEnabled="false"
+                    android:fontFamily="@font/open_sans"
+                    android:textAlignment="center"
+                    android:textColor="@color/primary_grey"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_setupprofile"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_32sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:text="Continue"
+                    android:textColor="@color/primary_purple"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    app:cornerRadius="@dimen/_14sdp"
+                    app:strokeColor="@color/primary_purple"
+                    app:strokeWidth="@dimen/_3sdp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardheader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:defaultFocusHighlightEnabled="false"
+                android:fontFamily="@font/open_sans_semibold"
+                android:padding="@dimen/_8sdp"
+                android:text="Let's Setup your Profile"
+                android:textColor="@color/primary_purple"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_18sdp"
+                android:progressTint="#412691" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

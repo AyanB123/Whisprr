@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.app.whisprr.R;
 import com.app.whisprr.databinding.ActivityWelcomeStartUpBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class WelcomeStartUpActivity extends AppCompatActivity {
     ActivityWelcomeStartUpBinding binding;
@@ -44,6 +45,11 @@ public class WelcomeStartUpActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                if (FirebaseAuth.getInstance().getCurrentUser() != null) {
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                }
                 startActivity(new Intent(getApplicationContext(), SignInActivity.class));
 
             }
